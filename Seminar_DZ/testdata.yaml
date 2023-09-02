@@ -1,0 +1,10 @@
+address: https://test-stand.gb.ru
+browser: chrome
+sleep_time: 2
+fromaddress: ####
+toaddress: ####
+mypass: ####
+url: "https://test-stand.gb.ru/gateway/login"
+url1: "https://test-stand.gb.ru/api/posts"
+username: "Ivan1234"
+password: "416b69ce0b"
