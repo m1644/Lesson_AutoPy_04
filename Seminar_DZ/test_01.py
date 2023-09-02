@@ -61,7 +61,7 @@ pytest -v test_01.py ; python email_report.py
 def test_step_5_api_notme(browser, api_get_token):
     logging.info("Test_05 Starting...")
     testpage = OperationsHelper(browser)
-    assert 'qqqqqq' in testpage.api_get_notme_posts(api_get_token)
+    assert 'Русские пельмени' in testpage.api_get_notme_posts(api_get_token)
 
 def test_step_6_api_me(browser, api_get_token):
     logging.info("Test_06 Starting...")

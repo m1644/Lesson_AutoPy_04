@@ -142,12 +142,12 @@ class OperationsHelper(BasePage):
 # API
     def api_get_notme_posts(self, token):
         try:
-            response = requests.get(url=url1, headers={"X-Auth-Token": token}, params={"owner": "notMe"})
-            content_box = [item["content"] for item in response.json()["data"]]
+            response = requests.get(url=url1, headers={"X-Auth-Token": token}, params={"owner": "notMe", "sort": "createdAt", "order": "ASC"})
+            content_box = [item["title"] for item in response.json()["data"]]
         except:
             logging.exception("API get posts exception")
             return None
-        logging.debug(f"API check not me post content")
+        logging.debug(f"API check not me post Title")
         return content_box
     
     def api_get_me_posts(self, token):
@@ -157,5 +157,5 @@ class OperationsHelper(BasePage):
         except:
             logging.exception("API get posts exception")
             return None
-        logging.debug(f"API check me post content")
+        logging.debug(f"API check me post Content")
         return content_box
