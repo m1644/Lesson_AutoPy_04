@@ -147,7 +147,7 @@ class OperationsHelper(BasePage):
         except:
             logging.exception("API get posts exception")
             return None
-        logging.debug(f"API check not me post Title")
+        logging.debug(f"API check not me post Title {content_box}")
         return content_box
     
     def api_get_me_posts(self, token):
@@ -157,5 +157,5 @@ class OperationsHelper(BasePage):
         except:
             logging.exception("API get posts exception")
             return None
-        logging.debug(f"API check me post Content")
+        logging.debug(f"API check me post Content {content_box}")
         return content_box
